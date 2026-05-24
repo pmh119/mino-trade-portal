@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="m.mino.trade - 모바일 전용 개인 프로젝트 포털 및 대시보드.">
+  <title>mino.trade | Mobile Hub</title>
+  <!-- Import Shared & Mobile Specific Stylesheets -->
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+</head>
+<body>
+
+  <!-- Mobile Hub Layout -->
+  <div class="mobile-wrapper">
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header glass-panel">
+      <div class="header-brand">
+        <span class="brand-logo">M</span>
+        <span class="brand-text">MINO.TRADE</span>
+      </div>
+      
+      <!-- Date & Weather Widget -->
+      <div class="header-widgets">
+        <span id="mobile-time">00:00</span>
+        <div class="mobile-weather">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line></svg>
+          <span>24°C</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Scrollable Main Content -->
+    <main class="mobile-main">
+      <div class="welcome-banner">
+        <h2 id="mobile-category-title">모든 서비스</h2>
+        <p class="welcome-date" id="mobile-date">5월 24일 일요일</p>
+      </div>
+
+      <!-- Compact touch-optimized card list -->
+      <div class="mobile-projects-grid" id="mobile-grid">
+        <!-- Dynamic mobile project cards injected via JS -->
+      </div>
+    </main>
+
+    <!-- Bottom Navigation Bar (iOS/Android Native style) -->
+    <nav class="bottom-nav glass-panel">
+      <button class="nav-tab active" data-tab="all">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+        <span>전체</span>
+      </button>
+      <button class="nav-tab" data-tab="finance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        <span>금융/핫딜</span>
+      </button>
+      <button class="nav-tab" data-tab="education">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+        <span>교육</span>
+      </button>
+      <button class="nav-tab" data-tab="home" id="tab-home-category">
+        <div class="tab-vault-icon" id="tab-lock-indicator">🔒</div>
+        <span>스마트 홈</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Bottom-up Slide-in Vault Drawer -->
+  <div class="vault-overlay" id="pin-vault-overlay">
+    <div class="vault-container glass-panel mobile-drawer">
+      
+      <!-- Drag handle indicator for premium UI look -->
+      <div class="drawer-handle"></div>
+      
+      <div class="vault-logo">
+        <svg viewBox="0 0 24 24" id="vault-lock-svg"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+      </div>
+      <h2 class="vault-title">보안 금고 해제</h2>
+      <p class="vault-subtitle">개인 스마트 홈 기기 접근을 위한 4자리 PIN 입력</p>
+
+      <!-- Dots Display -->
+      <div class="pin-dots">
+        <div class="pin-dot"></div>
+        <div class="pin-dot"></div>
+        <div class="pin-dot"></div>
+        <div class="pin-dot"></div>
+      </div>
+
+      <!-- Keypad -->
+      <div class="pin-keypad">
+        <button class="keypad-btn" data-val="1">1</button>
+        <button class="keypad-btn" data-val="2">2</button>
+        <button class="keypad-btn" data-val="3">3</button>
+        <button class="keypad-btn" data-val="4">4</button>
+        <button class="keypad-btn" data-val="5">5</button>
+        <button class="keypad-btn" data-val="6">6</button>
+        <button class="keypad-btn" data-val="7">7</button>
+        <button class="keypad-btn" data-val="8">8</button>
+        <button class="keypad-btn" data-val="9">9</button>
+        <button class="keypad-btn action" id="keypad-clear">Clear</button>
+        <button class="keypad-btn" data-val="0">0</button>
+        <button class="keypad-btn action" id="keypad-delete">Del</button>
+      </div>
+
+      <button class="glass-btn" id="vault-close-btn" style="width: 100%; justify-content: center; margin-top: 0.5rem; padding: 0.8rem;">
+        닫기
+      </button>
+    </div>
+  </div>
+
+  <!-- Javascript Dependencies -->
+  <script src="../js/shared.js"></script>
+  <script src="../js/mobile.js"></script>
+</body>
+</html>
