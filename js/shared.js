@@ -8,7 +8,7 @@ const AppState = {
       id: 'family-board',
       name: '가족게시판',
       category: 'family',
-      url: 'https://script.google.com/macros/s/AKfycbxq3heQP0akpcE3UKuibadk5_rcFepbYpDbQnSdjG2VLxzLR2TPK13EqR5tJNeWxE2N/exec?page=가족 라운지', 
+      url: 'https://sites.google.com/view/minoga0', 
       description: '소중한 가족 일정, 공지사항 및 방명록 라운지',
       isPrivate: true,
       iconTheme: 'family'
