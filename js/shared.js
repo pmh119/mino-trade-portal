@@ -53,7 +53,7 @@ const AppState = {
       id: 'hotdeal',
       name: '핫딜',
       category: 'lifestyle',
-      url: 'https://hotdeal.mino.trade',
+      url: 'https://lazboyngirl-shopping.web.app',
       description: '인기 커뮤니티 특가 정보 실시간 수집 및 검색 포털 (Shopping Hub)',
       isPrivate: false,
       iconTheme: 'hotdeal'
