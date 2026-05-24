@@ -28,7 +28,7 @@ const AppState = {
       category: 'home',
       url: 'http://localhost:5174',
       description: '냉장실/냉동실 식재료 보관 현황 및 유통기한 스마트 관리',
-      isPrivate: true,
+      isPrivate: false,
       iconTheme: 'fridge'
     },
     {
@@ -37,7 +37,7 @@ const AppState = {
       category: 'home',
       url: 'https://script.google.com/macros/s/AKfycbxq3heQP0akpcE3UKuibadk5_rcFepbYpDbQnSdjG2VLxzLR2TPK13EqR5tJNeWxE2N/exec?page=가족 라운지',
       description: '구역별 일일 집안일 체크리스트 및 가족 구성원 분담 현황',
-      isPrivate: true,
+      isPrivate: false,
       iconTheme: 'chore'
     },
     {
