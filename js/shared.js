@@ -8,8 +8,8 @@ const AppState = {
       id: 'family-board',
       name: '가족게시판',
       category: 'family',
-      url: 'https://script.google.com/macros/s/AKfycbwO4U-6g72X-tJ6nL46T2eR4t6d8NlR3t3f2k/exec', // Default placeholder or configured GAS url
-      description: '소중한 가족 이야기와 공지사항, 사진첩',
+      url: 'https://script.google.com/macros/s/AKfycbxq3heQP0akpcE3UKuibadk5_rcFepbYpDbQnSdjG2VLxzLR2TPK13EqR5tJNeWxE2N/exec?page=가족 라운지', 
+      description: '소중한 가족 일정, 공지사항 및 방명록 라운지',
       isPrivate: true,
       iconTheme: 'family'
     },
@@ -17,8 +17,8 @@ const AppState = {
       id: 'wallpad',
       name: '월패드',
       category: 'home',
-      url: 'https://wallpad.mino.trade', // Local home dashboard or public proxy
-      description: '실시간 가옥 모니터링, 전등 및 온도 스마트 제어',
+      url: 'http://localhost:5173', 
+      description: '로컬 가옥 모니터링, 전등 및 온도 스마트 제어 (KDOne Dashboard)',
       isPrivate: true,
       iconTheme: 'home'
     },
@@ -26,8 +26,8 @@ const AppState = {
       id: 'fridge',
       name: '냉장고',
       category: 'home',
-      url: 'https://fridge.mino.trade',
-      description: '냉장실/냉동실 식재료 보관 현황 및 소비기한 알림',
+      url: 'http://localhost:5174',
+      description: '냉장실/냉동실 식재료 보관 현황 및 유통기한 스마트 관리',
       isPrivate: true,
       iconTheme: 'fridge'
     },
@@ -35,8 +35,8 @@ const AppState = {
       id: 'chore',
       name: '집안일',
       category: 'home',
-      url: 'https://chore.mino.trade',
-      description: '구역별 일일 집안일 체크리스트 및 로테이션 분담',
+      url: 'https://script.google.com/macros/s/AKfycbxq3heQP0akpcE3UKuibadk5_rcFepbYpDbQnSdjG2VLxzLR2TPK13EqR5tJNeWxE2N/exec?page=가족 라운지',
+      description: '구역별 일일 집안일 체크리스트 및 가족 구성원 분담 현황',
       isPrivate: true,
       iconTheme: 'chore'
     },
@@ -44,8 +44,8 @@ const AppState = {
       id: 'stock',
       name: '주식스크린',
       category: 'finance',
-      url: 'https://stock.mino.trade',
-      description: '국내외 주요 지수, 환율 및 개인 관심 종목 실시간 보드',
+      url: 'https://script.google.com/macros/s/AKfycbwR_DHFFnsIRuXqnru4RmK0dx0zCTabTBrjPKFXseWI3Cuy7Bu7p87nrIq5fmwGG0T4gg/exec',
+      description: '국내외 주요 지수 및 개인 관심 종목 실시간 대시보드 (미노 작업실)',
       isPrivate: false,
       iconTheme: 'stock'
     },
@@ -53,8 +53,8 @@ const AppState = {
       id: 'hotdeal',
       name: '핫딜',
       category: 'lifestyle',
-      url: 'https://hotdeal.mino.trade',
-      description: '커뮤니티 인기 특가 정보 수집 및 실시간 알림 서비스',
+      url: 'https://lazboyngirl.web.app',
+      description: '인기 커뮤니티 특가 정보 실시간 수집 및 검색 포털 (Shopping Hub)',
       isPrivate: false,
       iconTheme: 'hotdeal'
     },
@@ -62,8 +62,8 @@ const AppState = {
       id: 'quiz',
       name: '퀴즈',
       category: 'education',
-      url: 'https://quiz.mino.trade',
-      description: '두뇌 건강을 위한 매일 새로운 상식 및 창의력 퀴즈',
+      url: 'https://study-qna-app.web.app',
+      description: '두뇌 건강과 학습 능력을 높이는 매일 새로운 데일리 상식 퀴즈',
       isPrivate: false,
       iconTheme: 'quiz'
     },
@@ -71,8 +71,8 @@ const AppState = {
       id: 'phonics',
       name: '파닉스',
       category: 'education',
-      url: 'https://phonics.mino.trade',
-      description: '아이들을 위한 재미있는 파닉스 영어 단어 발음 학습 놀이',
+      url: 'https://phonics-catch-test.web.app',
+      description: '아이들을 위한 쉽고 재미있는 영어 단어 및 원어민 발음 학습 놀이',
       isPrivate: false,
       iconTheme: 'phonics'
     },
@@ -80,8 +80,8 @@ const AppState = {
       id: 'vts-pt',
       name: 'VTS PT',
       category: 'health',
-      url: 'https://vtspt.mino.trade',
-      description: '개인 맞춤형 피트니스 루틴 관리 및 자세 교정 기록',
+      url: 'https://script.google.com/macros/s/AKfycbww3J0EzydcOmcikUhVSUNyw3fkmL5g-75P-ATtIAApGdefAdP_lPpuABvGtPTDXdFm/exec',
+      description: '가족 구성원의 일일 운동 정보 공유 및 피트니스 명예의 전당 (박가네 운동일지)',
       isPrivate: false,
       iconTheme: 'health'
     }
