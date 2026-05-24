@@ -44,8 +44,8 @@ const AppState = {
       id: 'stock',
       name: '주식스크린',
       category: 'finance',
-      url: 'https://script.google.com/macros/s/AKfycbwR_DHFFnsIRuXqnru4RmK0dx0zCTabTBrjPKFXseWI3Cuy7Bu7p87nrIq5fmwGG0T4gg/exec',
-      description: '국내외 주요 지수 및 개인 관심 종목 실시간 대시보드 (미노 작업실)',
+      url: 'https://stock.mino.trade',
+      description: '국내외 주요 지수, 환율 및 개인 관심 종목 실시간 스크린 대시보드',
       isPrivate: false,
       iconTheme: 'stock'
     },
