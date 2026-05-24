@@ -35,7 +35,7 @@ const AppState = {
       id: 'chore',
       name: '집안일',
       category: 'home',
-      url: 'https://script.google.com/macros/s/AKfycbxq3heQP0akpcE3UKuibadk5_rcFepbYpDbQnSdjG2VLxzLR2TPK13EqR5tJNeWxE2N/exec?page=가족 라운지',
+      url: 'https://lazboyngirl.web.app',
       description: '구역별 일일 집안일 체크리스트 및 가족 구성원 분담 현황',
       isPrivate: false,
       iconTheme: 'chore'
@@ -53,7 +53,7 @@ const AppState = {
       id: 'hotdeal',
       name: '핫딜',
       category: 'lifestyle',
-      url: 'https://lazboyngirl.web.app',
+      url: 'https://hotdeal.mino.trade',
       description: '인기 커뮤니티 특가 정보 실시간 수집 및 검색 포털 (Shopping Hub)',
       isPrivate: false,
       iconTheme: 'hotdeal'
