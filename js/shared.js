@@ -26,7 +26,7 @@ const AppState = {
       id: 'fridge',
       name: '냉장고',
       category: 'home',
-      url: 'http://localhost:5174',
+      url: 'https://fridge.mino.trade',
       description: '냉장실/냉동실 식재료 보관 현황 및 유통기한 스마트 관리',
       isPrivate: false,
       iconTheme: 'fridge'
