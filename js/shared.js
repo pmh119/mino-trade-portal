@@ -80,6 +80,15 @@ const AppState = {
       id: 'vts-pt',
       name: 'VTS PT',
       category: 'health',
+      url: 'https://vts.mino.trade',
+      description: '개인 맞춤형 피트니스 루틴 관리 및 자세 교정 기록 서비스',
+      isPrivate: false,
+      iconTheme: 'health'
+    },
+    {
+      id: 'workout-log',
+      name: '운동일지',
+      category: 'health',
       url: 'https://script.google.com/macros/s/AKfycbww3J0EzydcOmcikUhVSUNyw3fkmL5g-75P-ATtIAApGdefAdP_lPpuABvGtPTDXdFm/exec',
       description: '가족 구성원의 일일 운동 정보 공유 및 피트니스 명예의 전당 (박가네 운동일지)',
       isPrivate: false,
