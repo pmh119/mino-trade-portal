@@ -106,9 +106,73 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
+      // Intercept click if there are subLinks
+      if (project.subLinks && project.subLinks.length > 0) {
+        card.href = '#';
+        card.removeAttribute('target');
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          openSublinkDrawer(project);
+        });
+      }
+
       mobileGrid.appendChild(card);
     });
   }
+
+  // Sub-link Drawer Actions
+  const sublinkModal = document.getElementById('sublink-modal');
+  const sublinkCloseBtn = document.getElementById('sublink-close-btn');
+  const sublinkModalTitle = document.getElementById('sublink-modal-title');
+  const sublinkModalSubtitle = document.getElementById('sublink-modal-subtitle');
+  const sublinksContainer = document.getElementById('sublinks-container');
+
+  function openSublinkDrawer(project) {
+    sublinkModalTitle.textContent = `${project.name} 선택 이동`;
+    sublinkModalSubtitle.textContent = project.description;
+    sublinksContainer.innerHTML = '';
+
+    project.subLinks.forEach(sub => {
+      const subCard = document.createElement('a');
+      subCard.href = sub.url;
+      subCard.target = '_blank';
+      subCard.className = 'sublink-item glass-panel';
+      
+      let accentColor = 'var(--accent-cyan)';
+      let iconSvg = SVGIcons[sub.icon] || SVGIcons.home;
+      if (sub.icon === 'health') {
+        accentColor = 'var(--accent-yellow)';
+      } else if (sub.icon === 'stock') {
+        accentColor = 'var(--accent-cyan)';
+      }
+      
+      subCard.style.setProperty('--accent-color', accentColor);
+      subCard.innerHTML = `
+        <div class="sublink-icon-box" style="--accent-color: ${accentColor}">${iconSvg}</div>
+        <div style="flex-grow:1;">
+          <h4 style="margin:0; font-size:0.95rem; color:#fff; font-weight:700;">${sub.name}</h4>
+          <p style="margin:0.15rem 0 0; font-size:0.75rem; color:var(--color-text-secondary); line-height:1.3; font-weight:500;">${sub.description}</p>
+        </div>
+        <div style="color:var(--color-text-muted);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
+      `;
+      
+      subCard.addEventListener('click', () => {
+        setTimeout(closeSublinkDrawer, 300);
+      });
+
+      sublinksContainer.appendChild(subCard);
+    });
+
+    sublinkModal.classList.add('active');
+  }
+
+  function closeSublinkDrawer() {
+    sublinkModal.classList.remove('active');
+  }
+
+  sublinkCloseBtn.addEventListener('click', closeSublinkDrawer);
 
   // 3. Tab Bar Click Event
   navTabs.forEach(tab => {

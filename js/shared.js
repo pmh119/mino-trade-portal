@@ -80,10 +80,24 @@ const AppState = {
       id: 'vts-pt',
       name: 'VTS PT',
       category: 'health',
-      url: 'https://vts.mino.trade',
-      description: '개인 맞춤형 피트니스 루틴 관리 및 자세 교정 기록 서비스',
+      url: '#vts-modal',
+      description: '맞춤형 피트니스 루틴 관리 및 자세 교정 기록 서비스',
       isPrivate: false,
-      iconTheme: 'health'
+      iconTheme: 'health',
+      subLinks: [
+        {
+          name: 'VTS PT 서비스 접속',
+          url: 'https://vts.mino.trade',
+          description: '일일 PT 운동 분석 및 메인 피트니스 모바일 페이지',
+          icon: 'health'
+        },
+        {
+          name: 'VTS 발표자 대시보드',
+          url: 'https://script.google.com/macros/s/AKfycbx_cL4u97uokNOnKwdKHcLVVGRsenbIAxWc5Fde_oW86TfoSH0s3b2j2NvROTE-ICCm/exec',
+          description: '실시간 VTS AI 분석 발표 및 슬라이드 관리 시스템',
+          icon: 'stock'
+        }
+      ]
     },
     {
       id: 'workout-log',

@@ -144,6 +144,22 @@
     </div>
   </div>
 
+  <!-- Sub-link Selector Modal -->
+  <div class="vault-overlay" id="sublink-modal">
+    <div class="vault-container glass-panel" style="max-width: 450px;">
+      <h2 class="vault-title" id="sublink-modal-title">이동 경로 선택</h2>
+      <p class="vault-subtitle" id="sublink-modal-subtitle">접속할 채널 또는 대시보드를 선택해 주세요.</p>
+      
+      <div class="sublinks-list" id="sublinks-container" style="display:flex; flex-direction:column; gap:1rem; margin:1.5rem 0;">
+        <!-- Injected dynamically via JS -->
+      </div>
+      
+      <button class="glass-btn" id="sublink-close-btn" style="width: 100%; justify-content: center;">
+        닫기
+      </button>
+    </div>
+  </div>
+
   <!-- Shared Javascript dependencies -->
   <script src="js/shared.js"></script>
   <script src="js/desktop.js"></script>

@@ -406,6 +406,50 @@ body {
   color: var(--accent-red);
 }
 
+/* Sublink list styles inside selection modals */
+.sublink-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.2rem 1.5rem !important;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 16px !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.sublink-item:hover, .sublink-item:active {
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgba(var(--accent-rgb, 255, 255, 255), 0.3) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.sublink-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--accent-color, var(--color-text-secondary));
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.sublink-item:hover .sublink-icon-box {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 0 10px var(--accent-color);
+  border-color: transparent;
+}
+
+.sublink-item:hover .sublink-icon-box svg {
+  transform: scale(1.1);
+}
+
 /* Utility Animations */
 .fade-in {
   animation: fadeIn var(--transition-normal) forwards;

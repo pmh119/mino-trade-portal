@@ -135,6 +135,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
+      // Intercept click if there are subLinks
+      if (project.subLinks && project.subLinks.length > 0) {
+        card.href = '#';
+        card.removeAttribute('target');
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          openSublinkModal(project);
+        });
+      }
+
       // Glow effect tracking mouse coordinates
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -147,6 +157,58 @@ document.addEventListener('DOMContentLoaded', () => {
       desktopGrid.appendChild(card);
     });
   }
+
+  // Sub-link Modal Actions
+  const sublinkModal = document.getElementById('sublink-modal');
+  const sublinkCloseBtn = document.getElementById('sublink-close-btn');
+  const sublinkModalTitle = document.getElementById('sublink-modal-title');
+  const sublinkModalSubtitle = document.getElementById('sublink-modal-subtitle');
+  const sublinksContainer = document.getElementById('sublinks-container');
+
+  function openSublinkModal(project) {
+    sublinkModalTitle.textContent = `${project.name} 경로 선택`;
+    sublinkModalSubtitle.textContent = project.description;
+    sublinksContainer.innerHTML = '';
+
+    project.subLinks.forEach(sub => {
+      const subCard = document.createElement('a');
+      subCard.href = sub.url;
+      subCard.target = '_blank';
+      subCard.className = 'sublink-item glass-panel';
+      
+      let accentColor = 'var(--accent-cyan)';
+      let iconSvg = SVGIcons[sub.icon] || SVGIcons.home;
+      if (sub.icon === 'health') {
+        accentColor = 'var(--accent-yellow)';
+      } else if (sub.icon === 'stock') {
+        accentColor = 'var(--accent-cyan)';
+      }
+      
+      subCard.style.setProperty('--accent-color', accentColor);
+      subCard.innerHTML = `
+        <div class="sublink-icon-box" style="--accent-color: ${accentColor}">${iconSvg}</div>
+        <div>
+          <h4 style="margin:0; font-size:1.05rem; color:#fff; font-weight:700;">${sub.name}</h4>
+          <p style="margin:0.2rem 0 0; font-size:0.8rem; color:var(--color-text-secondary); font-weight:500;">${sub.description}</p>
+        </div>
+      `;
+      
+      // Close modal on click so it looks clean
+      subCard.addEventListener('click', () => {
+        setTimeout(closeSublinkModal, 300);
+      });
+
+      sublinksContainer.appendChild(subCard);
+    });
+
+    sublinkModal.classList.add('active');
+  }
+
+  function closeSublinkModal() {
+    sublinkModal.classList.remove('active');
+  }
+
+  sublinkCloseBtn.addEventListener('click', closeSublinkModal);
 
   // 3. Category Nav Item clicks
   navItems.forEach(item => {
