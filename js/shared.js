@@ -113,7 +113,7 @@ const AppState = {
   // Security & Vault State
   vault: {
     isUnlocked: false,
-    correctPin: '1103', // Default PIN requested
+    correctPin: '5688', 
     currentPinInput: '',
     inactivityTimeout: 300000, // 5 minutes (300,000ms)
     timeoutTimer: null,
