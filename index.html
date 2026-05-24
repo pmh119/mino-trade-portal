@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Mobile Subdomain & Responsive Mobile Device Auto-Redirect
+    if (window.location.hostname.startsWith('m.') || window.innerWidth < 768) {
+      if (!window.location.pathname.startsWith('/m/')) {
+        window.location.replace('/m/');
+      }
+    }
+  </script>
   <meta name="description" content="mino.trade - 개인 프로젝트 포털 및 대시보드. 나만의 도구들을 한눈에 편리하게 관리하세요.">
   <title>mino.trade | Personal Workspace Portal</title>
   <link rel="stylesheet" href="css/shared.css">
